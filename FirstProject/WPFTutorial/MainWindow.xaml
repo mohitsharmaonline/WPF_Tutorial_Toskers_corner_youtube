@@ -31,7 +31,12 @@
     
     <!-- Suppose i don't want my window to have heigt and width , 
     may be content will adjust according to how window is 
-    loaded.-->
+    loaded.
+    now i got a window which is huge, i would like new hight and 
+    width settings to prevail during design time only.
+    seeting height and width using "d" will set height and width only
+    in designer. -->
+    
     <Window x:Class="WPFTutorial.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -39,7 +44,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="MainWindow"  Loaded="Window_Loaded">
+        Title="MainWindow"  Loaded="Window_Loaded"
+            d:DesignHeight="200" d:DesignWidth="200">
     <Grid x:Name="MainGridPanel">
         
     </Grid>
