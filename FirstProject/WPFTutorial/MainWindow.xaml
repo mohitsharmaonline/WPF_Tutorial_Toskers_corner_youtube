@@ -35,7 +35,19 @@
     now i got a window which is huge, i would like new hight and 
     width settings to prevail during design time only.
     seeting height and width using "d" will set height and width only
-    in designer. -->
+    in designer. 
+    
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc is the mapping for xaml compatibility namespace
+    
+    mc:Ignorable="d"
+    above line ignores our 'd' prefix. so it means it won't raise
+    any error when processed by the xaml parser.
+    
+    xmlns:local="clr-namespace:WPFTutorial"
+    local is the root of your application, normally used for declaring
+    controls, resources, covertors.
+    -->
     
     <Window x:Class="WPFTutorial.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
