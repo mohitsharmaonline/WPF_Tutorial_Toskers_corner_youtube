@@ -3,6 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:WPFTutorial"
              StartupUri="MainWindow.xaml">
+    <!-- file used to primariy create global styles like static resouces to be used throughout the application.
+    so if we need to provide a single default style to all buttons in our app, write it here.-->
     <Application.Resources>
          
     </Application.Resources>
