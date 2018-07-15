@@ -1,4 +1,34 @@
-﻿<Window x:Class="WPFTutorial.MainWindow"
+﻿<!-- xmlns: xml namespaces which are very crutial to what we do 
+    inside of our XAML and even interacting with things outside of
+    our xaml. This is similar to having the "using namespaces" in
+    your code behind.
+    allows you to define aliases that directs you to URI namespaces.
+    xmlns:prefix="URI"
+    prefix: the short name (alias) using which you will refer 
+    the namespace.
+    URI: location URI of the namespace. (could be links to XML
+    documentations or they could benamespaces to points in your 
+    applications such as folders or even another solution.)
+    
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    default namespace (without prefix) gives us our presentation 
+    controls.
+    
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    x is used for mapping xaml namespace in templates for projects
+    
+    x:Class="WPFTutorial.MainWindow"
+    specifies a CLR namespace and a class name for the class that 
+    provides code behind for our XAML page. (WPFTutorial.MainWindow)
+    
+    x:Name could be used to name our control throughout our application.
+    by naming our controls allows us to reference it in our code behind
+    
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    d is for design time attributes, to tell the xaml parser not to
+    interpret these attributes at runtime.
+    -->
+    <Window x:Class="WPFTutorial.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -6,7 +36,7 @@
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
         Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
-    <Grid>
+    <Grid x:Name="MainGridPanel">
         
     </Grid>
 </Window>

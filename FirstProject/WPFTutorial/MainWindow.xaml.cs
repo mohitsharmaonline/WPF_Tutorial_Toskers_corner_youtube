@@ -17,9 +17,11 @@ namespace WPFTutorial
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
+    /// Code Behind for our MainWindow.
     /// </summary>
     public partial class MainWindow : Window
     {
+        string Name = "Hello world!";
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +30,9 @@ namespace WPFTutorial
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             // write your custom code for functionality you want to run when Window id Loaded.
+            // there is going to be no difference between accessing variables named "Name" and "MainGridPanel".
+            Name = "No Hello world!";
+            MainGridPanel.Background = Brushes.Purple;
         }
     }
 }
