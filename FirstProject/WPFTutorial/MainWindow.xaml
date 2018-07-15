@@ -28,6 +28,10 @@
     d is for design time attributes, to tell the xaml parser not to
     interpret these attributes at runtime.
     -->
+    
+    <!-- Suppose i don't want my window to have heigt and width , 
+    may be content will adjust according to how window is 
+    loaded.-->
     <Window x:Class="WPFTutorial.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
@@ -35,7 +39,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525" Loaded="Window_Loaded">
+        Title="MainWindow"  Loaded="Window_Loaded">
     <Grid x:Name="MainGridPanel">
         
     </Grid>
