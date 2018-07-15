@@ -47,6 +47,10 @@
     xmlns:local="clr-namespace:WPFTutorial"
     local is the root of your application, normally used for declaring
     controls, resources, covertors.
+    
+    we can make our own xmlns similer to local to access new locations
+    like when we create a new folder
+    created a new folder named "Models"
     -->
     
     <Window x:Class="WPFTutorial.MainWindow"
@@ -55,9 +59,15 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFTutorial"
+        xmlns:models="clr-namespace:WPFTutorial.Models"
         mc:Ignorable="d"
         Title="MainWindow"  Loaded="Window_Loaded"
             d:DesignHeight="200" d:DesignWidth="200">
+    <Window.Resources>
+        <DataTemplate DataType="{x:Type models:MyModelObject}">
+            <DockPanel Background="Yellow"/>
+        </DataTemplate>
+    </Window.Resources>
     <Grid x:Name="MainGridPanel">
         
     </Grid>
