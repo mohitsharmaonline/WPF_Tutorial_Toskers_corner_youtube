@@ -24,5 +24,10 @@ namespace WPFTutorial
         {
             InitializeComponent();
         }
+
+        private void Window_Loaded(object sender, RoutedEventArgs e)
+        {
+            // write your custom code for functionality you want to run when Window id Loaded.
+        }
     }
 }
