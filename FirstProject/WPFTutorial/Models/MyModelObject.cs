@@ -8,5 +8,6 @@ namespace WPFTutorial.Models
 {
     public class MyModelObject
     {
+        public string Name { get; set; }
     }
 }
