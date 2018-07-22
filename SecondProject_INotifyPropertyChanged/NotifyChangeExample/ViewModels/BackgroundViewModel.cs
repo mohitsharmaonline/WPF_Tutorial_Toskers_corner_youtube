@@ -17,7 +17,7 @@ namespace NotifyChangeExample.ViewModels
             {
                 if(_color == null)
                 {
-                    return Brushes.Red;
+                    return Brushes.Orange;
                 }
                 return _color;
             }

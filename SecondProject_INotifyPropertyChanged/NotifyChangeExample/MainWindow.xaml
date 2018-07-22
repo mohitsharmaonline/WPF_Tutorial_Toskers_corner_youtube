@@ -6,20 +6,28 @@
         xmlns:local="clr-namespace:NotifyChangeExample"
         mc:Ignorable="d"
         Title="PropertyChanged Example" Height="300" Width="300">
-    <Grid>
+    <Grid Background="{Binding Background.Color}">
         <DockPanel LastChildFill="False">
             <StackPanel Width="150" DockPanel.Dock="Top">
-                <TextBlock Text="Welcome Unknown"/>
-                <TextBox Text=""/>
+                <TextBlock Text="{Binding Person.Name, StringFormat=Welcome {0}}"/>
+                <TextBox Text="{Binding Person.Name, 
+                    Mode=OneWayToSource,
+                    UpdateSourceTrigger=PropertyChanged}"/>
                 <Button>Submit</Button>
             </StackPanel>
             <StackPanel 
                 HorizontalAlignment="Center" 
                 Orientation="Horizontal"
                 DockPanel.Dock="Bottom">
-                <Button>Red Background</Button>
-                <Button>Blue Background</Button>
-                <Button>Yellow Background</Button>
+                <Button Click="Red_Clicked">
+                    Red Background
+                </Button>
+                <Button Click="Blue_Clicked">
+                    Blue Background
+                </Button>
+                <Button Click="Yellow_Clicked">
+                    Yellow Background
+                </Button>
             </StackPanel>
         </DockPanel>
     </Grid>
