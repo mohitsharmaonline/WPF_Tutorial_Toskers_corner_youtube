@@ -5,8 +5,22 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:NotifyChangeExample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="PropertyChanged Example" Height="300" Width="300">
     <Grid>
-        
+        <DockPanel LastChildFill="False">
+            <StackPanel Width="150" DockPanel.Dock="Top">
+                <TextBlock Text="Welcome Unknown"/>
+                <TextBox Text=""/>
+                <Button>Submit</Button>
+            </StackPanel>
+            <StackPanel 
+                HorizontalAlignment="Center" 
+                Orientation="Horizontal"
+                DockPanel.Dock="Bottom">
+                <Button>Red Background</Button>
+                <Button>Blue Background</Button>
+                <Button>Yellow Background</Button>
+            </StackPanel>
+        </DockPanel>
     </Grid>
 </Window>
