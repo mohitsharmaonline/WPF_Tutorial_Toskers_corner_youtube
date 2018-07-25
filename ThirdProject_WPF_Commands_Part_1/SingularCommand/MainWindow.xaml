@@ -28,8 +28,12 @@
         Title="Single Class Command" Height="350" Width="525">
     <Grid>
         <StackPanel>
-            <TextBox/>
-            <Button>Show Message</Button>
+            <TextBox Text="{Binding MessageText, 
+                Mode=OneWayToSource, 
+                UpdateSourceTrigger=PropertyChanged}"/>
+            <Button Command="{Binding DisplayMessageCommand}">
+                Show Message
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
