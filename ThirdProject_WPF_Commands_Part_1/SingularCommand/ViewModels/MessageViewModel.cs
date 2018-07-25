@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SingularCommand.ViewModels.Commands;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -11,9 +12,11 @@ namespace SingularCommand.ViewModels
     {
         public string MessageText { get; set; }
 
+        public MessageCommand DisplayMessageCommand { get; private set; }
+
         public MessageViewModel()
         {
-
+            DisplayMessageCommand = new MessageCommand(DisplayMessage);
         }
 
         public void DisplayMessage()
