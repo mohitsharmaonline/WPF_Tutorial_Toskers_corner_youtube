@@ -1,12 +1,35 @@
-﻿<Window x:Class="SingularCommand.MainWindow"
+﻿<!-- ICommand is a simple interface you can use in WPF to execute
+    logic in your DataContext while eliminating the semantics
+    between the UI and business logic.
+    
+    It allows you to execute methods without them being called
+    in your views code-behind.
+    
+    ICommand Interface contains 3 methods:
+    1) void Execute(object parameter)
+    2) bool CanExecute(object parameter)
+    3) event EventHandler CanExecuteChanged;
+    
+    You can create commands by having individual classes that implement
+    the ICommand interface. This is, in my unprofessional opinion, a
+    bad practice to carry but is practical in certain situations.
+    
+    Relay / Delegate Command: Utilizing this concept we can create
+    commands across the application by implementing a single command
+    handling class.    
+    -->
+    <Window x:Class="SingularCommand.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SingularCommand"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Single Class Command" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel>
+            <TextBox/>
+            <Button>Show Message</Button>
+        </StackPanel>
     </Grid>
 </Window>
