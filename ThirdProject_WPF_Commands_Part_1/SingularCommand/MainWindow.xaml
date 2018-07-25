@@ -28,10 +28,10 @@
         Title="Single Class Command" Height="350" Width="525">
     <Grid>
         <StackPanel>
-            <TextBox Text="{Binding MessageText, 
-                Mode=OneWayToSource, 
-                UpdateSourceTrigger=PropertyChanged}"/>
-            <Button Command="{Binding DisplayMessageCommand}">
+            <TextBox x:Name="messageBox"/>
+            <Button Command="{Binding DisplayMessageCommand}"
+                    CommandParameter="{Binding ElementName=messageBox, 
+                Path=Text}">
                 Show Message
             </Button>
         </StackPanel>
