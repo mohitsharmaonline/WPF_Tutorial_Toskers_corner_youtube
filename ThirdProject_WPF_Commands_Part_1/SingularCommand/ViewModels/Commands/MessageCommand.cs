@@ -11,14 +11,14 @@ namespace SingularCommand.ViewModels.Commands
     {
         public event EventHandler CanExecuteChanged;
 
-        // Here we can use MessageViewModel as a parameter 
-        // and can use it to display message. However
-        // this kind of paramenter will tie the command to a 
-        // particular View Manager. so we would rater avoid
-        // this kind of parameter.
-        public MessageCommand(MessageViewModel vm)
+        private Action _execute;
+        
+        // We will instead use parameter of type Action that
+        // is a delegate containing method with no parameter
+        // in this case.
+        public MessageCommand(Action execute)
         {
-            vm.DisplayMessage();
+            _execute = execute;
         }
 
         public bool CanExecute(object parameter)
@@ -28,7 +28,8 @@ namespace SingularCommand.ViewModels.Commands
 
         public void Execute(object parameter)
         {
-            throw new NotImplementedException();
+            // Fire the method coming via delegate.
+            _execute.Invoke();
         }
     }
 }
