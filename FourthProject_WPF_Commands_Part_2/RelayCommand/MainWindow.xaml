@@ -1,4 +1,14 @@
-﻿<Window x:Class="RelayCommand.MainWindow"
+﻿    <!-- Relay / Delegate Command: it is kind of a universal command.
+    
+    what we are going to make:
+    We are going to have a string collection in our view model and
+    our combobox will display all the available messages and we will be
+    able to show those messages in a message box or log it in a console.
+    and then we will have two special messages where one each can only 
+    be submitted by either the message or console but not both.
+    -->
+    
+    <Window x:Class="RelayCommand.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
