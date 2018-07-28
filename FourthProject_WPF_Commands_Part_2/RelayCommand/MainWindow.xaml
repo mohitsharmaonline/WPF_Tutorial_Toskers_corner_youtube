@@ -20,7 +20,12 @@
         <StackPanel Width="250">
             <TextBlock>Messages</TextBlock>
             <!-- Populate combobox with collection MyMessages.-->
-            <ComboBox  x:Name="ComboMessages"
+            <!-- Demonstration of usefulness of commands-->
+            <!-- We can change Combobox with ListView and nothing
+            much changes, all functionalities works like
+            charm as before. So by using commands you can change
+            things around without affecting others at all.-->
+            <ListView Height="200"  x:Name="ComboMessages"
                        ItemsSource="{Binding MyMessages}"/>
             <Button Command="{Binding MessageBoxCommand}"
                     CommandParameter=
