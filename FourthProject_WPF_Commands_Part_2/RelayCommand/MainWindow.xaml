@@ -5,8 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:RelayCommand"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Learning Relay Commands" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel Width="250">
+            <TextBlock>Messages</TextBlock>
+            <ComboBox/>
+            <Button>Message Box</Button>
+            <Button>Console Log</Button>
+        </StackPanel>
     </Grid>
 </Window>
