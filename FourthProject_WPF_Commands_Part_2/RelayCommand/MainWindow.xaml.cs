@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RelayCommand.ViewModels;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,8 @@ namespace RelayCommand
         public MainWindow()
         {
             InitializeComponent();
+
+            DataContext = new MessageViewModel();
         }
     }
 }

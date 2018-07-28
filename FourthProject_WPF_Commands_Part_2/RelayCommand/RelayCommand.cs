@@ -8,12 +8,12 @@ using System.Windows.Input;
 namespace RelayCommand
 {
     // we are going to add an Action here as before and also something known as the predicate.
-    public class RelayCommand : ICommand
+    public class RelayCommandClass : ICommand
     {
         readonly Action<object> _execute;
         readonly Predicate<object> _canExecute;
 
-        public RelayCommand(Action<object> execute, Predicate<object> canExecute)
+        public RelayCommandClass(Action<object> execute, Predicate<object> canExecute)
         {
             _execute = execute ?? throw new NullReferenceException(nameof(execute));
             _canExecute = canExecute;
@@ -21,7 +21,7 @@ namespace RelayCommand
 
         // In some cases we might not need to supply predicate.
         // for those cases we will have another constructor.
-        public RelayCommand(Action<object> execute) : this(execute, null)
+        public RelayCommandClass(Action<object> execute) : this(execute, null)
         {
         }
 

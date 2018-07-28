@@ -14,8 +14,8 @@ namespace RelayCommand.ViewModels
         public ObservableCollection<string> MyMessages { get; private set; }
 
         // our two relay commands
-        public RelayCommand MessageBoxCommand { get; private set; }
-        public RelayCommand ConsoleLogCommand { get; private set; }
+        public RelayCommandClass MessageBoxCommand { get; private set; }
+        public RelayCommandClass ConsoleLogCommand { get; private set; }
 
         public MessageViewModel()
         {
@@ -30,8 +30,8 @@ namespace RelayCommand.ViewModels
                 "Im a console!"
             };
 
-            MessageBoxCommand = new RelayCommand(DisplayMessageBox, MessageBoxCanUse);
-            ConsoleLogCommand = new RelayCommand(DisplayInConsole, ConsoleCanUse);
+            MessageBoxCommand = new RelayCommandClass(DisplayMessageBox, MessageBoxCanUse);
+            ConsoleLogCommand = new RelayCommandClass(DisplayInConsole, ConsoleCanUse);
         }
 
         // Some methods that our commands will encapsulate.
