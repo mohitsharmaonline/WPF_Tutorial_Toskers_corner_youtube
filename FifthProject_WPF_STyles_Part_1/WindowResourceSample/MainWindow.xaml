@@ -37,6 +37,14 @@
                x:Key="ExtendedBaseStyle">
             <Setter Property="FontSize" Value="24"/>
         </Style>
+        <!-- Extended Special Style -->
+        <Style 
+            TargetType="Button" 
+            BasedOn="{StaticResource SpecialStyle}"
+            x:Key="ExtendedSpecialStyle">
+            <Setter Property="FontSize" Value="34"/>
+        </Style>
+            
     </Window.Resources>
     <Grid>
         <StackPanel>
@@ -46,6 +54,9 @@
             </Button>
             <Button Style="{StaticResource ExtendedBaseStyle}">
                 Extended Base Style
+            </Button>
+            <Button Style="{StaticResource ExtendedSpecialStyle}">
+                Extended Special Style
             </Button>
         </StackPanel>
     </Grid>
