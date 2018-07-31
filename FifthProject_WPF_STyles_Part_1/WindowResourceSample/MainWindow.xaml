@@ -1,12 +1,35 @@
-﻿<Window x:Class="WindowResourceSample.MainWindow"
+﻿<!-- Purpose: using Windows resources to define styles in your
+    window in a WPF application.
+    
+    Resources: object that holds certain style information or templates
+    that we can later use in the Xaml of our Window or User control
+    or page.
+    -->
+    <Window x:Class="WindowResourceSample.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WindowResourceSample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Window Resource Sample" Height="350" Width="525">
+    <Window.Resources>
+        <!-- it's almost like a dictionary of styles or templates.
+        we will see base styles, extended styles and key specific
+        styles.-->
+        <!-- Base button style. -->
+        <!-- All buttons in our window will have this style 
+        by default-->
+        <!-- TargetType: essentially a conrol that this style will
+        be targeted to.-->
+        <Style TargetType="Button">
+            <Setter Property="Background" Value="Black"/>
+            <Setter Property="Foreground" Value="White"/>            
+        </Style>
+    </Window.Resources>
     <Grid>
-        
+        <StackPanel>
+            <Button>Base Button</Button>
+        </StackPanel>
     </Grid>
 </Window>
