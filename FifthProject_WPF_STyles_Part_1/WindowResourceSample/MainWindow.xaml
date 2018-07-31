@@ -31,12 +31,21 @@
             <Setter Property="Background" Value="White"/>
             <Setter Property="Foreground" Value="Black"/>
         </Style>
+        <!-- Base Extended Style -->
+        <Style TargetType="Button" 
+               BasedOn="{StaticResource {x:Type Button}}"
+               x:Key="ExtendedBaseStyle">
+            <Setter Property="FontSize" Value="24"/>
+        </Style>
     </Window.Resources>
     <Grid>
         <StackPanel>
             <Button>Base Button</Button>
             <Button Style="{StaticResource SpecialStyle}">
                 Special Button
+            </Button>
+            <Button Style="{StaticResource ExtendedBaseStyle}">
+                Extended Base Style
             </Button>
         </StackPanel>
     </Grid>
