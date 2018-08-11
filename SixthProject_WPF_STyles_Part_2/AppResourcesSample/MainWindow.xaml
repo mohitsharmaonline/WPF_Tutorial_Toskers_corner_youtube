@@ -9,8 +9,12 @@
     <Grid>
         <StackPanel>
             <Button>Base Button</Button>
-            <Button>Dark Button</Button>
-            <Button>LightButton</Button>
+            <Button Style="{StaticResource DarkButtonStyle}">
+                Dark Button
+            </Button>
+            <Button Style="{StaticResource LightButtonStyle}">
+                LightButton
+            </Button>
         </StackPanel>
     </Grid>
 </Window>
