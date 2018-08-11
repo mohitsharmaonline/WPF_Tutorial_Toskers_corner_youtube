@@ -3,6 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:AppResourcesSample"
              StartupUri="MainWindow.xaml">
+    <!-- This is the file where we keep all those settings which we want to get applied universally within the application -->
     <Application.Resources>
          
     </Application.Resources>
