@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:AppResourcesSample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="App Resource Sample" Height="350" Width="525">
     <Grid>
-        
+        <StackPanel>
+            <Button>Base Button</Button>
+            <Button>Dark Button</Button>
+            <Button>LightButton</Button>
+        </StackPanel>
     </Grid>
 </Window>
