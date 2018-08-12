@@ -3,9 +3,14 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ResourceDictionarySample"
              StartupUri="MainWindow.xaml">
-    <!-- This will throw problem as we can have only one RfesourceDictionary at the application level. -->    
+    <!-- This will throw problem as we can have only one RfesourceDictionary at the application level. -->
+    <!-- As a solution, we will use merge dictionary instead.-->
     <Application.Resources>
-        <ResourceDictionary Source="ResourceDictionaries/ButtonDictionary.xaml"/>
-        <ResourceDictionary Source="ResourceDictionaries/LabelDictionary.xaml"/>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="ResourceDictionaries/ButtonDictionary.xaml"/>
+                <ResourceDictionary Source="ResourceDictionaries/LabelDictionary.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+        </ResourceDictionary>
     </Application.Resources>
 </Application>
