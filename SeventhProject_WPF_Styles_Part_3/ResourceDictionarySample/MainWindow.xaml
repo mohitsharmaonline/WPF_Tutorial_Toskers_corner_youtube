@@ -8,8 +8,12 @@
         Title="Resource Dictionary Sample" Height="450" Width="800">
     <Grid>
         <StackPanel Margin="50">
-            <Label>BIG TITLE</Label>
-            <Label>Full Name</Label>
+            <Label Style="{StaticResource TitleLabel}">
+                BIG TITLE
+            </Label>
+            <Label Style="{StaticResource TextboxLabel}">
+                Full Name
+            </Label>
             <TextBox/>
             <Button Style="{StaticResource SubmitButton}">Submit</Button>
             <Button Style="{StaticResource CancelButton}">Cancel</Button>
