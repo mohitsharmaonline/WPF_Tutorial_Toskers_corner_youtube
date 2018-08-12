@@ -3,7 +3,9 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="clr-namespace:ResourceDictionarySample"
              StartupUri="MainWindow.xaml">
+    <!-- This will throw problem as we can have only one RfesourceDictionary at the application level. -->    
     <Application.Resources>
         <ResourceDictionary Source="ResourceDictionaries/ButtonDictionary.xaml"/>
+        <ResourceDictionary Source="ResourceDictionaries/LabelDictionary.xaml"/>
     </Application.Resources>
 </Application>
