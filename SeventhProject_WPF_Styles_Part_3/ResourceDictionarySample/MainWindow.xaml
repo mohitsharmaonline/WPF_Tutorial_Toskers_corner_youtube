@@ -11,8 +11,8 @@
             <Label>BIG TITLE</Label>
             <Label>Full Name</Label>
             <TextBox/>
-            <Button>Submit</Button>
-            <Button>Cancel</Button>
+            <Button Style="{StaticResource SubmitButton}">Submit</Button>
+            <Button Style="{StaticResource CancelButton}">Cancel</Button>
         </StackPanel>
     </Grid>
 </Window>
