@@ -11,6 +11,9 @@
     <!-- RelativeSource is a class that describes the markup extension 
     to kind of describe or point to a location of a relative bound
     source.-->
+    <!-- So the concept here which we are trying to design is
+    that there will be a ListView where each item
+    will be a name and a remove button.-->
     <Grid>
         
     </Grid>
