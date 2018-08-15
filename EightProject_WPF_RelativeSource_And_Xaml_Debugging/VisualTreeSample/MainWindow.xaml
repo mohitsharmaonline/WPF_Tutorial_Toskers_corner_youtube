@@ -14,7 +14,29 @@
     <!-- So the concept here which we are trying to design is
     that there will be a ListView where each item
     will be a name and a remove button.-->
+    <Window.DataContext>
+        <local:MainWindowViewModel/>
+    </Window.DataContext>
     <Grid>
-        
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+
+        <Grid Grid.Column="0" DataContext="{Binding ListView}">
+            <ListView ItemsSource="{Binding Names}">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel>
+                            <TextBlock Text="{Binding}"/>
+                            <Button 
+                                Content="Remove" 
+                                Command="{Binding DataContext.RemoveNameCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid,AncestorLevel=2}}"
+                                CommandParameter="{Binding}"/>
+                        </StackPanel>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </Grid>
     </Grid>
 </Window>
