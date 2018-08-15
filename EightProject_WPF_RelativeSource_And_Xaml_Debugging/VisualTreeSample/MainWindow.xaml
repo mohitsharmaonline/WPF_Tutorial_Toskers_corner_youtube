@@ -5,7 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:VisualTreeSample"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="350" Width="525">
+    <!-- We are going to talk about RelativeSource class in WPF as
+    well as using the Visual Tree in the WPF Debugger.-->
+    <!-- RelativeSource is a class that describes the markup extension 
+    to kind of describe or point to a location of a relative bound
+    source.-->
     <Grid>
         
     </Grid>
