@@ -33,7 +33,7 @@
                             <TextBlock Text="{Binding}"/>
                             <Button 
                                 Content="Remove" 
-                                Command="{Binding DataContext.RemoveNameCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid,AncestorLevel=2}}"
+                                Command="{Binding DataContext.RemoveNameCommand, RelativeSource={RelativeSource Mode=FindAncestor, AncestorType=Grid,AncestorLevel=3}}"
                                 CommandParameter="{Binding}"/>
                         </StackPanel>
                     </DataTemplate>
