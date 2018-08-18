@@ -14,6 +14,8 @@
     <!-- So the concept here which we are trying to design is
     that there will be a ListView where each item
     will be a name and a remove button.-->
+    <!-- Further acts on debugging available in rtf document named 
+    "Relativesource_Xaml_Debugging"-->
     <Window.DataContext>
         <local:MainWindowViewModel/>
     </Window.DataContext>
