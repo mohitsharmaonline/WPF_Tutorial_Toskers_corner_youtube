@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Globalization;
+using System.Windows;
 using System.Windows.Data;
 
 namespace ValueConverters.Converters
@@ -14,7 +15,17 @@ namespace ValueConverters.Converters
          * ****************************************************************************/
         public object Convert(object value, Type targetType, object parameter, CultureInfo culture)
         {
-            throw new NotImplementedException();
+            // If you want to do Collapse etc. you can modify the code
+            // for now it fullfills the purpose.s
+            var booleanVal = (bool)value;
+            if (booleanVal)
+            {
+                return Visibility.Visible;
+            }
+            else
+            {
+                return Visibility.Hidden;
+            }
         }
 
         public object ConvertBack(object value, Type targetType, object parameter, CultureInfo culture)
