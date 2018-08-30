@@ -8,10 +8,11 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:ValueConverters"
+        xmlns:converters="clr-namespace:ValueConverters.Converters"
         mc:Ignorable="d"
         Title="Better Example" Height="350" Width="525">
     <Window.Resources>
-        
+        <converters:BoolToVisibilityConverter x:Key="BoolToVisibility"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -25,13 +26,17 @@
         </Grid.ColumnDefinitions>
 
         <StackPanel Grid.Column="0" Grid.Row="0" Margin="5">
-            <CheckBox Content="Is Visible" 
-                      IsChecked="{Binding IsVisible}"/>
+            <CheckBox x:Name="visibleCheck" IsChecked="True" Content="Is Visible" />
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="0" Margin="5">
             <Button Content="I am visible!"
-                    Visibility="{Binding Visibility}"/>
+                    Visibility="{Binding ElementName=visibleCheck,
+                Path=IsChecked,
+                Converter={StaticResource BoolToVisibility}}"/>
+            <!--You will notice button getting disappered
+            as soon as binding is written. Hence we will give
+            Checkbox default value for IsChecked as true.-->
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="5">
