@@ -21,6 +21,12 @@ namespace NonValueConverter
             }
         }
 
+        /*********************************************************************
+         * The problem is that our ViewModel shouldn't really care about what
+         * Visibility is, This 'Visibility' property is mainly for our actual
+         * View. In most cases it shouldn't even care about IsVisible.
+         * We can handle this strictly in our xaml.
+         * ******************************************************************/
         private Visibility visibility;
         public Visibility Visibility
         {
