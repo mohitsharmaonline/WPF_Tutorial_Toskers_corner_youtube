@@ -12,8 +12,11 @@
         mc:Ignorable="d"
         Title="Better Example" Height="350" Width="525">
     <Window.Resources>
+        <!--You can add all these converters to app.xaml if you don't
+        choose to stuff all these in here only.-->
         <converters:BoolToVisibilityConverter x:Key="BoolToVisibility"/>
         <converters:BoolToBrushConeverter x:Key="StatusToBrush"/>
+        <converters:BoolToStringConverter x:Key="BoolToString"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -65,12 +68,15 @@
         change accordingly.-->
 
         <StackPanel Grid.Column="0" Grid.Row="2" Margin="5">
-            <CheckBox Content="Signup for NewsLetter"/>
+            <CheckBox x:Name="newsCheck" Content="Signup for NewsLetter"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="2" Margin="5">
             <Label>Signed up for newsletter</Label>
-            <TextBox />
+            <TextBox 
+                Text="{Binding 
+                ElementName=newsCheck, Path=IsChecked,
+                Converter={StaticResource BoolToString}}" />
         </StackPanel>
     </Grid>
 </Window>
