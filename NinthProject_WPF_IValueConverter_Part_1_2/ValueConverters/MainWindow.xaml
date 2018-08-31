@@ -13,6 +13,7 @@
         Title="Better Example" Height="350" Width="525">
     <Window.Resources>
         <converters:BoolToVisibilityConverter x:Key="BoolToVisibility"/>
+        <converters:BoolToBrushConeverter x:Key="StatusToBrush"/>
     </Window.Resources>
     <Grid>
         <Grid.RowDefinitions>
@@ -44,11 +45,15 @@
         we want username to be displayed as green, and if he is 
         offline, we want it to be shown as red.-->
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="5">
-            <CheckBox Content="Is Online"/>
+            <CheckBox x:Name="onlineCheck"
+                      Content="Is Online"/>
         </StackPanel>
 
         <StackPanel Grid.Column="1" Grid.Row="1" Margin="5">
-            <Label Content="FrogPattle13"/>
+            <Label Content="FrogPattle13"
+                   Foreground="{Binding 
+                ElementName=onlineCheck, Path=IsChecked,
+                Converter={StaticResource StatusToBrush}}"/>
         </StackPanel>
 
         <StackPanel Grid.Column="0" Grid.Row="2" Margin="5">
