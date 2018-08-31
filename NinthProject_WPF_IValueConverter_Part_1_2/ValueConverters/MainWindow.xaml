@@ -55,6 +55,14 @@
                 ElementName=onlineCheck, Path=IsChecked,
                 Converter={StaticResource StatusToBrush}}"/>
         </StackPanel>
+        <!-- In this example we will learn about Converting back 
+        and forth rather than only converting to.
+        
+        So here if we check Signup for newsletter checkbox,
+        our textbox should show yes else no.
+        However in this example we should also be able to manually
+        enter yes or no in textbox and checkbox tick should
+        change accordingly.-->
 
         <StackPanel Grid.Column="0" Grid.Row="2" Margin="5">
             <CheckBox Content="Signup for NewsLetter"/>
