@@ -39,6 +39,10 @@
             Checkbox default value for IsChecked as true.-->
         </StackPanel>
 
+        <!--In the next example we have a 'Is Online'
+        checkbox and a username. Now if user checks Is Online,
+        we want username to be displayed as green, and if he is 
+        offline, we want it to be shown as red.-->
         <StackPanel Grid.Column="0" Grid.Row="1" Margin="5">
             <CheckBox Content="Is Online"/>
         </StackPanel>
